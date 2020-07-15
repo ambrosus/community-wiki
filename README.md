@@ -1,1 +1,3 @@
-[Ambrosus community wiki](../../wiki)
+# Ambrosus Community Wiki
+
+[wiki](../../wiki)
