@@ -1,0 +1,11 @@
+# NODE 1.1.14
+
+- With this release, Hermes owners will be able to use the complete version of the Extended Node API. It allows you to request any piece of data stored in bundles on the Atlas nodes, and receive it right away. 
+
+- The key news for Hermes holders is that there is an opportunity to restore private bundles in the event of losing access to the node. A private data encryption key is also securely backed.
+
+- Now, Hermes node operators are able to send bundles to the network manually whenever they need, apart from automatic bundle creation. This allows avoiding unnecessary data uploads to the network.
+
+- It’s also important to guarantee that data sheltered on Atlas nodes are safe and unchanged. To ensure this, in Hermes node we have implemented periodic checks for sheltered bundles integrity. In case some contents are missing or corrupted, Hermes node will request new API endpoint (/restore) on Atlas node to restore data from other Atlas nodes storing the same bundle.
+
+- With a simple http-request to this new /restore endpoint anyone will be able to ask Atlas node for validation and restoration of specific bundle.

@@ -1,0 +1,28 @@
+EXPLORER 4.0.27
+
+- blockProcessor has been rewritten from scratch (allows easier debugging if there’re any issues with block processing);
+- prefetchBlocks has been added to blockExplorer;
+- BackgroundWorker introduced (since Explorer backend has multiple jobs in the background, a tool to handle those jobs was needed, to monitor time taken for a specific job);
+- accountCollector restyled;
+- safeShutdown added allowing to safely shutdown a synchronization;
+- NodeEventCollector/BlockCollector has been added to decrease the cluster load;
+- eventsProcessor re-implemented allowing to handle a batch of events at once;
+- Migrator service is now deprecated, migration files removed;
+- netInfo performance has been increased;
+- netInfo has been restyled to a single service instance;
+- lowered the load on Ambrosus parity cluster;
+- builder restyled and renamed to Glob.Obj;
+- lowered the load on mongoDB instances (4x);
+- transaction indexes revision completed, old indexes removed;
+- fixed a bug when Atlas/Apollo balance won't be updated;
+- fixed a bug when blocks are fetched in a random manner (front-end);
+- fixed a bug when gasUsed can contain hex string as a value;
+- fixed a bug when back-end could go unresponsive while processing contract transactions;
+- fixed a bug when apollo/atlas balance won't be updated at certain scenarios;
+- fixed a bug when bundles are not fetched;
+- fixed content length computation which could lead to memory heap error;
+- /transactions: fixed a bug when there was an incorrect value for the field 'hasInners';
+- /accounts: added sort by Total Power (balance + stake);
+- code refactored and shortened;
+- old files cleaned up;
+- small bug fixes and overall performance improved.
